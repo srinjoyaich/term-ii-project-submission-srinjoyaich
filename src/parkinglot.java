@@ -51,5 +51,14 @@ class ParkingLot {
         activeTickets.remove(vehicleNumber);
     }
 
+    public void displayAvailableSlots() {
+        System.out.println("\nAvailable Slots:");
+        for (ParkingSlot slot : slots) {
+            if (!slot.isOccupied()) {
+                System.out.println("Slot " + slot.getSlotNumber());
+            }
+        }
+    }
+
 
 }
